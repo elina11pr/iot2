@@ -1,0 +1,36 @@
+{
+    "device": {
+      "device_id": null,
+      "name": "IoT Temperature Sensor",
+      "location": "office_room_1",
+      "description": "Симулятор температурного датчика"
+    },
+    "sensor": {
+      "type": "temperature",
+      "unit": "celsius",
+      "min_value": 18.0,
+      "max_value": 32.0,
+      "precision": 2
+    },
+    "network": {
+      "webhook_url": "https://httpbin.org/post",
+      "timeout": 10,
+      "max_retries": 3,
+      "retry_delay": 2
+    },
+    "timing": {
+      "interval_seconds": 5,
+      "startup_delay": 2
+    },
+    "logging": {
+      "level": "INFO",
+      "file": "iot_device.log",
+      "max_file_size_mb": 10,
+      "backup_count": 5
+    },
+    "monitoring": {
+      "max_consecutive_failures": 5,
+      "health_check_interval": 60,
+      "enable_system_metrics": false
+    }
+  }
